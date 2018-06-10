@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Show Hide</title>
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <style media="screen">
+      ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+      }
+      ul li {
+        background: green;
+        width: 50px;
+        height: 10px;
+        float: left;
+        margin-right: 2px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        tampil();
+      });
+
+      function tampil() {
+        $("li").first().show(500, function callback_tampil(){
+          if ($(this).is(":last-child")) {
+            hilang();
+          } else {
+            $(this).next().show(500, callback_tampil);
+          }
+        });
+      }
+      function hilang() {
+        $("li").last().hide(500, function callback_hilang(){
+          if ($(this).is(":first-child")) {
+            tampil();
+          } else {
+            $(this).prev().hide(500, callback_hilang);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
