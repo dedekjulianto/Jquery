@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Pengenalan Jquery</title>
+  <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+  <div class="element-special">Halo saya element special</div>
+
+  <button id="tombol-hide">Hide</button>
+  <button class="tombol-show">Show</button>
+
+  <script type="text/javascript">
+    //utk menjalankan script Jquery hrus di dlm tag javascript
+    $(document).ready(function() { //memberi tahu jquery akan dijalankan jika document sudH selesai diload
+
+      $("#tombol-hide").click(function() { // medefinisikan selector #tombol-hide dengan action click
+        $(".element-special").hide(); // fungsi hide utk menyembunyikan element special
+      });
+
+      $(".tombol-show").click(function() { // definisi dengan action click
+        $(".element-special").show(); // fungsi show utk menampilkan element special
+      });
+    });
+  </script>
+</body>
+
+</html>
