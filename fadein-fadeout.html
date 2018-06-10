@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Show Hide</title>
+    <title>FadeIn FadeOut</title>
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <style media="screen">
       ul {
@@ -34,20 +34,20 @@
       });
 
       function tampil() {
-        $("li").first().show(500, function callback_tampil(){
+        $("li").first().fadeIn(500, function callback_tampil(){
           if ($(this).is(":last-child")) {
             hilang();
           } else {
-            $(this).next().show(500, callback_tampil);
+            $(this).next().fadeIn(500, callback_tampil);
           }
         });
       }
       function hilang() {
-        $("li").last().hide(500, function callback_hilang(){
+        $("li").last().fadeOut(500, function callback_hilang(){
           if ($(this).is(":first-child")) {
             tampil();
           } else {
-            $(this).prev().hide(500, callback_hilang);
+            $(this).prev().fadeOut(500, callback_hilang);
           }
         });
       }
