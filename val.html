@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Val </title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js">
+
+    </script>
+  </head>
+  <body>
+    <input type="text" id="inputText" />
+    <div id="hasilText">
+    </div>
+    <hr/>
+
+    <input type="radio" class="inputCheckBox" name="choose" value="Choose 1" />Choose 1<br />
+    <input type="radio" class="inputCheckBox" name="choose" value="Choose 2" />Choose 2<br />
+    <input type="radio" class="inputCheckBox" name="choose" value="Choose 3" />Choose 3<br />
+
+    <div id="hasilCheckBox">
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#inputText").val("xxx aa");
+
+        $(".inputCheckBox").change(function(){
+          var nilaiCheckBox = $(".inputCheckBox:radio:checked").val();
+          $("#hasilCheckBox").html(nilaiCheckBox);
+        });
+      });
+    </script>
+  </body>
+</html>
