@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Children</title>
+  <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+  <button id="akses-anak">Akses Anak</button>
+  <hr />
+
+  <div id="ibu">
+    Ini string di dalam div id ibu
+    <div>Anak 1</div>
+    <div>Anak 2</div>
+    <div class="anak3">Anak 3</div>
+    <div>Anak 4</div>
+  </div>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#akses-anak").click(function() {
+        $("#ibu").children(".anak3").css("color", "blue");
+      });
+    });
+  </script>
+</body>
+
+</html>

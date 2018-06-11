@@ -7,7 +7,11 @@
   <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
   <style>
     .boxHijau {
-      background: green;
+      background: red;
+      color: white;
+    }
+    .boxBlue{
+      background: blue;
       color: white;
     }
   </style>
@@ -18,7 +22,7 @@
   <button class="hilang_class">Hilang Class</button>
   <hr />
 
-  <div class="box">
+  <div id="box">
     Ini adalah element yang akan ditambahkan ataupun dihilangkan classnya
   </div>
 
@@ -27,10 +31,10 @@
     $(document).ready(function() {
 
       $(".tambah_class").click(function() {
-        $(".box").addClass("boxHijau");
+        $("#box").addClass("boxHijau").addClass("boxBlue");
       });
       $(".hilang_class").click(function() {
-        $(".box").removeClass("boxHijau");
+        $("#box").removeClass("boxHijau");
       });
 
     });

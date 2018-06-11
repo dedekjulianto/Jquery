@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Each</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li>List ke 1</li>
+      <li>List ke 2</li>
+      <li>List ke 3</li>
+      <li>List ke 4</li>
+      <li>List ke 5</li>
+      <li>List ke 6</li>
+      <li>List ke 7</li>
+    </ul>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("li").each(function(index){
+          if (index % 2 == 0) {
+            $(this).css("color", "yellow");
+          } else {
+            $(this).css("color", "red");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
